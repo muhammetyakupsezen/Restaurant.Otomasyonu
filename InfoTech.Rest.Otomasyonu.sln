@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.Otomasyonu", "InfoTech.Rest.Otomasyonu\InfoTech.Rest.Otomasyonu.csproj", "{E9EF1A75-236A-4A24-893E-55B20BE5C2EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.DataLayer", "..\InfoTech.Rest.DataLayer\InfoTech.Rest.DataLayer\InfoTech.Rest.DataLayer.csproj", "{B4D07882-D44C-4115-82A3-C4CB03AC221C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.BusinessLayer", "..\InfoTech.Rest.Business\InfoTech.Rest.BusinessLayer\InfoTech.Rest.BusinessLayer.csproj", "{AAB16CBF-49B6-413E-8741-CF94A1200529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.Helper", "..\InfoTech.Rest.Helper\InfoTech.Rest.Helper\InfoTech.Rest.Helper.csproj", "{3427AB0A-9A55-4124-A68F-E26E1CAE3372}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.Otomasyon.AdisyonPanel", "..\AdisyonPanel\InfoTech.Rest.Otomasyon.AdisyonPanel\InfoTech.Rest.Otomasyon.AdisyonPanel.csproj", "{075FC60C-6B94-469E-A968-66F1118B9F45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.Rest.UrunPanel", "InfoTech.Rest.UrunPanel\InfoTech.Rest.UrunPanel.csproj", "{77619DD0-8BFA-4891-B099-9131E64144CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9EF1A75-236A-4A24-893E-55B20BE5C2EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9EF1A75-236A-4A24-893E-55B20BE5C2EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9EF1A75-236A-4A24-893E-55B20BE5C2EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9EF1A75-236A-4A24-893E-55B20BE5C2EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D07882-D44C-4115-82A3-C4CB03AC221C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D07882-D44C-4115-82A3-C4CB03AC221C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D07882-D44C-4115-82A3-C4CB03AC221C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D07882-D44C-4115-82A3-C4CB03AC221C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAB16CBF-49B6-413E-8741-CF94A1200529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAB16CBF-49B6-413E-8741-CF94A1200529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAB16CBF-49B6-413E-8741-CF94A1200529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAB16CBF-49B6-413E-8741-CF94A1200529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3427AB0A-9A55-4124-A68F-E26E1CAE3372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3427AB0A-9A55-4124-A68F-E26E1CAE3372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3427AB0A-9A55-4124-A68F-E26E1CAE3372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3427AB0A-9A55-4124-A68F-E26E1CAE3372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{075FC60C-6B94-469E-A968-66F1118B9F45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075FC60C-6B94-469E-A968-66F1118B9F45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075FC60C-6B94-469E-A968-66F1118B9F45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075FC60C-6B94-469E-A968-66F1118B9F45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77619DD0-8BFA-4891-B099-9131E64144CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77619DD0-8BFA-4891-B099-9131E64144CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77619DD0-8BFA-4891-B099-9131E64144CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77619DD0-8BFA-4891-B099-9131E64144CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06F46C78-7334-49E6-B4FD-3A411D02E2FE}
+	EndGlobalSection
+EndGlobal
