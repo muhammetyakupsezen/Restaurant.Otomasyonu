@@ -18,12 +18,14 @@ namespace InfoTech.Rest.Otomasyonu
         TblMasaKategorileri tblMasaKategorileri;
         TMasaIslemleri masaIslemleri;
         UrunIslemleri urunIslemleri;
+        TUyelikIslemleri uyelikIslemleri;
         public FrmAdminPaneli()
         {
             InitializeComponent();
             yoneticiIslemleri = new TYoneticiIslemleri();
             masaIslemleri = new TMasaIslemleri();
             urunIslemleri = new UrunIslemleri();
+            uyelikIslemleri = new TUyelikIslemleri();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -107,6 +109,31 @@ namespace InfoTech.Rest.Otomasyonu
             //    var UrunKategoriCmb = CmbSilinecekUrunKategoriId.Items.Add(Kategori.KategoriId);
             //}
 
+            ////////////////////////////////////////////////////////////////
+
+
+            List<TblUye> UyeListesi = uyelikIslemleri.UyeListele();
+            foreach (var Uye in UyeListesi)
+            {
+                LstUye.Items.Add(Uye.UyeId + " " + Uye.KullaniciAdi);
+            }
+
+            ////////////////////////////////////////////////////////////////
+            ///
+
+            List<TblUye> UyeListesiAdmin = uyelikIslemleri.UyeListele();
+            foreach (var Uye in UyeListesiAdmin)
+            {
+                LstKisiUyeBilgileri.Items.Add("kullanıcı Adı :  " + Uye.KullaniciAdi + "  Uye Id :   " + Uye.UyeId + "   KisiId  :   " + Uye.KisiId);
+            }
+
+            //////////////////////////////////////////////////////
+
+         List<TblKullaniciRolleri> tblKullaniciRolleriListesi =   uyelikIslemleri.KullaniciRolleriListesi();
+            foreach (var Rol in tblKullaniciRolleriListesi)
+            {
+                CmbKullaniciRolleri.Items.Add(Rol.RolId);
+            }
 
         }
 
@@ -556,8 +583,103 @@ namespace InfoTech.Rest.Otomasyonu
 
         private void button2_Click(object sender, EventArgs e) // BtnUüyükButonyeEkle B
         {
-            tabControl1.SelectTab(TpgUyeEkle);
+            tabControl1.SelectTab(TpgAdmin);
         }
+
+        private void BtnUyeEkle_Click(object sender, EventArgs e)
+        {
+            FrmUyeEkle frmUyeEkle = new FrmUyeEkle();
+            frmUyeEkle.ShowDialog();
+
+
+
+        }
+
+        private void BtnUyeSilBuyuk_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(TpgUyeSil);
+        }
+
+        private void btnUyeSil_Click(object sender, EventArgs e)
+        {
+            LstUye.Items.Clear();
+            TblUye tblUye = new TblUye();
+            tblUye.UyeId = Convert.ToInt32(TxtUyeId.Text.Trim());
+
+          bool basarili =  uyelikIslemleri.UyeSil(tblUye.UyeId);
+
+            if (!basarili)
+            {
+                MessageBox.Show("Üye silme işlemi başarısız");
+            }
+            else
+            {
+                MessageBox.Show("Üye silme işlemi başarılı");
+
+                List<TblUye> UyeListesi = uyelikIslemleri.UyeListele();
+                foreach (var Uye in UyeListesi)
+                {
+                    LstUye.Items.Add(Uye.UyeId + " " + Uye.KullaniciAdi );
+                }
+
+            }
+
+
+        }
+
+
+        private void BtnAdminEkle_Click(object sender, EventArgs e)
+        {
+            LstKisiUyeBilgileri.Items.Clear();
+
+            int KisiId = Convert.ToInt32(TxtKisiIdAdmin.Text.Trim());
+            int UyeId = Convert.ToInt32(TxtUyeIdAdmin.Text.Trim());
+            string Message = "";
+
+            TblKullaniciRolleri tblKullaniciRolleri = new TblKullaniciRolleri();
+            tblKullaniciRolleri.KullaniciId = UyeId;
+            tblKullaniciRolleri.Admin = true;
+            tblKullaniciRolleri.Raporlama = false;
+
+         bool Eklendi =   uyelikIslemleri.AdminEkle(KisiId, UyeId, tblKullaniciRolleri, out Message);
+            if (!Eklendi)
+            {
+                MessageBox.Show("Admin eklenemedi" + Message);
+                FrmUyeEkle frmUyeEkle = new FrmUyeEkle();
+                frmUyeEkle.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Admin kaydı başarıyla oluşturuldu");
+                List<TblUye> UyeListesiAdmin = uyelikIslemleri.UyeListele();
+                foreach (var Uye in UyeListesiAdmin)
+                {
+                    LstKisiUyeBilgileri.Items.Add("kullanıcı Adı :  " + Uye.KullaniciAdi + "  Uye Id :   " + Uye.UyeId + "   KisiId  :   " + Uye.KisiId  );
+                }
+            }
+
+        }
+
+        private void BtnAdminlikSil_Click(object sender, EventArgs e)
+        {
+
+            int RollId = Convert.ToInt32(CmbKullaniciRolleri.SelectedItem);  //Convert.ToInt32(TxtRollId.Text.Trim());
+
+           bool Basarili = uyelikIslemleri.AdminlikSil(RollId);
+
+            if (!Basarili)
+            {
+                MessageBox.Show("Admin yetkisi silme işlemi başarısız");
+            }
+            else
+            {
+                MessageBox.Show("Admin yetkisi silme işlemi başarılı");
+              
+            }
+
+        }
+
 
 
     }

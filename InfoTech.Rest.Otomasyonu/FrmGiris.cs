@@ -111,5 +111,15 @@ namespace InfoTech.Rest.Otomasyonu
         {
 
         }
+
+        private void LnkUyeOl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmUyeEkle frmUyeEkle = new FrmUyeEkle();
+            frmUyeEkle.Show();
+
+
+        }
+
+
     }
 }

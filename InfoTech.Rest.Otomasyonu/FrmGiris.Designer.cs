@@ -36,6 +36,7 @@
             this.BtnCikis = new System.Windows.Forms.Button();
             this.LnkLblAdminGirisi = new System.Windows.Forms.LinkLabel();
             this.LblKullaniciAdi = new System.Windows.Forms.Label();
+            this.LnkUyeOl = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -121,12 +122,23 @@
             // LblKullaniciAdi
             // 
             this.LblKullaniciAdi.AutoSize = true;
-            this.LblKullaniciAdi.Location = new System.Drawing.Point(375, 152);
+            this.LblKullaniciAdi.Location = new System.Drawing.Point(9, 4);
             this.LblKullaniciAdi.Name = "LblKullaniciAdi";
             this.LblKullaniciAdi.Size = new System.Drawing.Size(76, 16);
             this.LblKullaniciAdi.TabIndex = 7;
             this.LblKullaniciAdi.Text = "KullaniciAdi";
             this.LblKullaniciAdi.Visible = false;
+            // 
+            // LnkUyeOl
+            // 
+            this.LnkUyeOl.AutoSize = true;
+            this.LnkUyeOl.Location = new System.Drawing.Point(406, 152);
+            this.LnkUyeOl.Name = "LnkUyeOl";
+            this.LnkUyeOl.Size = new System.Drawing.Size(45, 16);
+            this.LnkUyeOl.TabIndex = 8;
+            this.LnkUyeOl.TabStop = true;
+            this.LnkUyeOl.Text = "UyeOl";
+            this.LnkUyeOl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkUyeOl_LinkClicked);
             // 
             // FrmGiris
             // 
@@ -135,6 +147,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(547, 227);
             this.ControlBox = false;
+            this.Controls.Add(this.LnkUyeOl);
             this.Controls.Add(this.LblKullaniciAdi);
             this.Controls.Add(this.LnkLblAdminGirisi);
             this.Controls.Add(this.BtnCikis);
@@ -163,6 +176,7 @@
         private System.Windows.Forms.Button BtnCikis;
         private System.Windows.Forms.LinkLabel LnkLblAdminGirisi;
         private System.Windows.Forms.Label LblKullaniciAdi;
+        private System.Windows.Forms.LinkLabel LnkUyeOl;
     }
 }
 

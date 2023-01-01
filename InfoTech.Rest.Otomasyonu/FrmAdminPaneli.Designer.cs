@@ -34,7 +34,9 @@
             this.BtnUrunKategoriEkle2 = new System.Windows.Forms.Button();
             this.BtnMasaEkle = new System.Windows.Forms.Button();
             this.PnlSolMenu = new System.Windows.Forms.Panel();
+            this.BtnEkraniYenile = new System.Windows.Forms.Button();
             this.BtnUyeEkleBuyuk = new System.Windows.Forms.Button();
+            this.BtnUrunEkleBuyuk = new System.Windows.Forms.Button();
             this.BtnMasaKategori = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -79,6 +81,10 @@
             this.LstUrunKategorileri = new System.Windows.Forms.ListBox();
             this.BtnUrunKategoriEkle = new System.Windows.Forms.Button();
             this.TpgUrunEkle = new System.Windows.Forms.TabPage();
+            this.CmbUrunTuru = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CmbSecilecekUrunKategorisi = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.TxtBarkod = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -88,13 +94,25 @@
             this.CmbUrunId = new System.Windows.Forms.ComboBox();
             this.LstUrunListesi = new System.Windows.Forms.ListBox();
             this.BtnUrunEkle = new System.Windows.Forms.Button();
-            this.TpgUyeEkle = new System.Windows.Forms.TabPage();
-            this.BtnEkraniYenile = new System.Windows.Forms.Button();
-            this.BtnUrunEkleBuyuk = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CmbSecilecekUrunKategorisi = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CmbUrunTuru = new System.Windows.Forms.ComboBox();
+            this.TpgUyeSil = new System.Windows.Forms.TabPage();
+            this.BtnUyeEkle = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtUyeId = new System.Windows.Forms.TextBox();
+            this.btnUyeSil = new System.Windows.Forms.Button();
+            this.BtnUyeSilBuyuk = new System.Windows.Forms.Button();
+            this.LstUye = new System.Windows.Forms.ListBox();
+            this.TpgAdmin = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TxtKisiIdAdmin = new System.Windows.Forms.TextBox();
+            this.TxtUyeIdAdmin = new System.Windows.Forms.TextBox();
+            this.BtnAdminEkle = new System.Windows.Forms.Button();
+            this.LstKisiUyeBilgileri = new System.Windows.Forms.ListBox();
+            this.BtnAdminlikSil = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.TxtRollId = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.CmbKullaniciRolleri = new System.Windows.Forms.ComboBox();
             this.PnlSolMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -102,6 +120,8 @@
             this.TpgMasaEkle.SuspendLayout();
             this.TpgUrunKategoriEkle.SuspendLayout();
             this.TpgUrunEkle.SuspendLayout();
+            this.TpgUyeSil.SuspendLayout();
+            this.TpgAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter2
@@ -149,6 +169,8 @@
             // PnlSolMenu
             // 
             this.PnlSolMenu.AutoScroll = true;
+            this.PnlSolMenu.Controls.Add(this.BtnUyeSilBuyuk);
+            this.PnlSolMenu.Controls.Add(this.BtnUyeEkle);
             this.PnlSolMenu.Controls.Add(this.BtnEkraniYenile);
             this.PnlSolMenu.Controls.Add(this.BtnUyeEkleBuyuk);
             this.PnlSolMenu.Controls.Add(this.BtnUrunEkleBuyuk);
@@ -162,6 +184,18 @@
             this.PnlSolMenu.Size = new System.Drawing.Size(267, 672);
             this.PnlSolMenu.TabIndex = 10;
             // 
+            // BtnEkraniYenile
+            // 
+            this.BtnEkraniYenile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEkraniYenile.Location = new System.Drawing.Point(0, 370);
+            this.BtnEkraniYenile.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEkraniYenile.Name = "BtnEkraniYenile";
+            this.BtnEkraniYenile.Size = new System.Drawing.Size(267, 74);
+            this.BtnEkraniYenile.TabIndex = 5;
+            this.BtnEkraniYenile.Text = "Ekranı Yenile";
+            this.BtnEkraniYenile.UseVisualStyleBackColor = true;
+            this.BtnEkraniYenile.Click += new System.EventHandler(this.button3_Click);
+            // 
             // BtnUyeEkleBuyuk
             // 
             this.BtnUyeEkleBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
@@ -170,9 +204,21 @@
             this.BtnUyeEkleBuyuk.Name = "BtnUyeEkleBuyuk";
             this.BtnUyeEkleBuyuk.Size = new System.Drawing.Size(267, 74);
             this.BtnUyeEkleBuyuk.TabIndex = 4;
-            this.BtnUyeEkleBuyuk.Text = "Üye Ekle";
+            this.BtnUyeEkleBuyuk.Text = "Admin Ekle";
             this.BtnUyeEkleBuyuk.UseVisualStyleBackColor = true;
             this.BtnUyeEkleBuyuk.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // BtnUrunEkleBuyuk
+            // 
+            this.BtnUrunEkleBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUrunEkleBuyuk.Location = new System.Drawing.Point(0, 222);
+            this.BtnUrunEkleBuyuk.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnUrunEkleBuyuk.Name = "BtnUrunEkleBuyuk";
+            this.BtnUrunEkleBuyuk.Size = new System.Drawing.Size(267, 74);
+            this.BtnUrunEkleBuyuk.TabIndex = 3;
+            this.BtnUrunEkleBuyuk.Text = "Ürün Ekle";
+            this.BtnUrunEkleBuyuk.UseVisualStyleBackColor = true;
+            this.BtnUrunEkleBuyuk.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnMasaKategori
             // 
@@ -312,7 +358,8 @@
             this.tabControl1.Controls.Add(this.TpgMasaEkle);
             this.tabControl1.Controls.Add(this.TpgUrunKategoriEkle);
             this.tabControl1.Controls.Add(this.TpgUrunEkle);
-            this.tabControl1.Controls.Add(this.TpgUyeEkle);
+            this.tabControl1.Controls.Add(this.TpgUyeSil);
+            this.tabControl1.Controls.Add(this.TpgAdmin);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(281, 0);
             this.tabControl1.Name = "tabControl1";
@@ -603,6 +650,40 @@
             this.TpgUrunEkle.TabIndex = 3;
             this.TpgUrunEkle.Text = "UrunEkle";
             // 
+            // CmbUrunTuru
+            // 
+            this.CmbUrunTuru.FormattingEnabled = true;
+            this.CmbUrunTuru.Location = new System.Drawing.Point(265, 214);
+            this.CmbUrunTuru.Name = "CmbUrunTuru";
+            this.CmbUrunTuru.Size = new System.Drawing.Size(156, 24);
+            this.CmbUrunTuru.TabIndex = 45;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(93, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Ürün Türü";
+            // 
+            // CmbSecilecekUrunKategorisi
+            // 
+            this.CmbSecilecekUrunKategorisi.FormattingEnabled = true;
+            this.CmbSecilecekUrunKategorisi.Location = new System.Drawing.Point(265, 181);
+            this.CmbSecilecekUrunKategorisi.Name = "CmbSecilecekUrunKategorisi";
+            this.CmbSecilecekUrunKategorisi.Size = new System.Drawing.Size(156, 24);
+            this.CmbSecilecekUrunKategorisi.TabIndex = 43;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Ürün kategorisi";
+            // 
             // TxtBarkod
             // 
             this.TxtBarkod.Location = new System.Drawing.Point(265, 142);
@@ -682,73 +763,193 @@
             this.BtnUrunEkle.UseVisualStyleBackColor = true;
             this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
             // 
-            // TpgUyeEkle
+            // TpgUyeSil
             // 
-            this.TpgUyeEkle.Location = new System.Drawing.Point(4, 25);
-            this.TpgUyeEkle.Name = "TpgUyeEkle";
-            this.TpgUyeEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgUyeEkle.Size = new System.Drawing.Size(975, 643);
-            this.TpgUyeEkle.TabIndex = 4;
-            this.TpgUyeEkle.Text = "UyeEkle";
-            this.TpgUyeEkle.UseVisualStyleBackColor = true;
+            this.TpgUyeSil.BackColor = System.Drawing.Color.Gray;
+            this.TpgUyeSil.Controls.Add(this.LstUye);
+            this.TpgUyeSil.Controls.Add(this.btnUyeSil);
+            this.TpgUyeSil.Controls.Add(this.TxtUyeId);
+            this.TpgUyeSil.Controls.Add(this.label8);
+            this.TpgUyeSil.Location = new System.Drawing.Point(4, 25);
+            this.TpgUyeSil.Name = "TpgUyeSil";
+            this.TpgUyeSil.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgUyeSil.Size = new System.Drawing.Size(975, 643);
+            this.TpgUyeSil.TabIndex = 4;
+            this.TpgUyeSil.Text = "UyeSİl";
             // 
-            // BtnEkraniYenile
+            // BtnUyeEkle
             // 
-            this.BtnEkraniYenile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEkraniYenile.Location = new System.Drawing.Point(0, 370);
-            this.BtnEkraniYenile.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnEkraniYenile.Name = "BtnEkraniYenile";
-            this.BtnEkraniYenile.Size = new System.Drawing.Size(267, 74);
-            this.BtnEkraniYenile.TabIndex = 5;
-            this.BtnEkraniYenile.Text = "Ekranı Yenile";
-            this.BtnEkraniYenile.UseVisualStyleBackColor = true;
-            this.BtnEkraniYenile.Click += new System.EventHandler(this.button3_Click);
+            this.BtnUyeEkle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUyeEkle.Location = new System.Drawing.Point(0, 444);
+            this.BtnUyeEkle.Name = "BtnUyeEkle";
+            this.BtnUyeEkle.Size = new System.Drawing.Size(267, 82);
+            this.BtnUyeEkle.TabIndex = 6;
+            this.BtnUyeEkle.Text = "Üye Ekle";
+            this.BtnUyeEkle.UseVisualStyleBackColor = true;
+            this.BtnUyeEkle.Click += new System.EventHandler(this.BtnUyeEkle_Click);
             // 
-            // BtnUrunEkleBuyuk
+            // label8
             // 
-            this.BtnUrunEkleBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnUrunEkleBuyuk.Location = new System.Drawing.Point(0, 222);
-            this.BtnUrunEkleBuyuk.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnUrunEkleBuyuk.Name = "BtnUrunEkleBuyuk";
-            this.BtnUrunEkleBuyuk.Size = new System.Drawing.Size(267, 74);
-            this.BtnUrunEkleBuyuk.TabIndex = 3;
-            this.BtnUrunEkleBuyuk.Text = "Ürün Ekle";
-            this.BtnUrunEkleBuyuk.UseVisualStyleBackColor = true;
-            this.BtnUrunEkleBuyuk.Click += new System.EventHandler(this.button1_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(176, 145);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Silinecek Üye ID : ";
             // 
-            // label2
+            // TxtUyeId
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(90, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
-            this.label2.TabIndex = 42;
-            this.label2.Text = "Ürün kategorisi";
+            this.TxtUyeId.Location = new System.Drawing.Point(310, 145);
+            this.TxtUyeId.Name = "TxtUyeId";
+            this.TxtUyeId.Size = new System.Drawing.Size(196, 22);
+            this.TxtUyeId.TabIndex = 1;
             // 
-            // CmbSecilecekUrunKategorisi
+            // btnUyeSil
             // 
-            this.CmbSecilecekUrunKategorisi.FormattingEnabled = true;
-            this.CmbSecilecekUrunKategorisi.Location = new System.Drawing.Point(265, 181);
-            this.CmbSecilecekUrunKategorisi.Name = "CmbSecilecekUrunKategorisi";
-            this.CmbSecilecekUrunKategorisi.Size = new System.Drawing.Size(156, 24);
-            this.CmbSecilecekUrunKategorisi.TabIndex = 43;
+            this.btnUyeSil.Location = new System.Drawing.Point(431, 184);
+            this.btnUyeSil.Name = "btnUyeSil";
+            this.btnUyeSil.Size = new System.Drawing.Size(75, 23);
+            this.btnUyeSil.TabIndex = 2;
+            this.btnUyeSil.Text = "Sil";
+            this.btnUyeSil.UseVisualStyleBackColor = true;
+            this.btnUyeSil.Click += new System.EventHandler(this.btnUyeSil_Click);
             // 
-            // label7
+            // BtnUyeSilBuyuk
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(93, 214);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 16);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "Ürün Türü";
+            this.BtnUyeSilBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUyeSilBuyuk.Location = new System.Drawing.Point(0, 526);
+            this.BtnUyeSilBuyuk.Name = "BtnUyeSilBuyuk";
+            this.BtnUyeSilBuyuk.Size = new System.Drawing.Size(267, 71);
+            this.BtnUyeSilBuyuk.TabIndex = 7;
+            this.BtnUyeSilBuyuk.Text = "Üye Sil";
+            this.BtnUyeSilBuyuk.UseVisualStyleBackColor = true;
+            this.BtnUyeSilBuyuk.Click += new System.EventHandler(this.BtnUyeSilBuyuk_Click);
             // 
-            // CmbUrunTuru
+            // LstUye
             // 
-            this.CmbUrunTuru.FormattingEnabled = true;
-            this.CmbUrunTuru.Location = new System.Drawing.Point(265, 214);
-            this.CmbUrunTuru.Name = "CmbUrunTuru";
-            this.CmbUrunTuru.Size = new System.Drawing.Size(156, 24);
-            this.CmbUrunTuru.TabIndex = 45;
+            this.LstUye.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LstUye.FormattingEnabled = true;
+            this.LstUye.ItemHeight = 16;
+            this.LstUye.Location = new System.Drawing.Point(601, 3);
+            this.LstUye.Name = "LstUye";
+            this.LstUye.Size = new System.Drawing.Size(371, 637);
+            this.LstUye.TabIndex = 3;
+            // 
+            // TpgAdmin
+            // 
+            this.TpgAdmin.BackColor = System.Drawing.Color.Gray;
+            this.TpgAdmin.Controls.Add(this.CmbKullaniciRolleri);
+            this.TpgAdmin.Controls.Add(this.TxtRollId);
+            this.TpgAdmin.Controls.Add(this.label17);
+            this.TpgAdmin.Controls.Add(this.label15);
+            this.TpgAdmin.Controls.Add(this.BtnAdminlikSil);
+            this.TpgAdmin.Controls.Add(this.LstKisiUyeBilgileri);
+            this.TpgAdmin.Controls.Add(this.BtnAdminEkle);
+            this.TpgAdmin.Controls.Add(this.TxtUyeIdAdmin);
+            this.TpgAdmin.Controls.Add(this.TxtKisiIdAdmin);
+            this.TpgAdmin.Controls.Add(this.label14);
+            this.TpgAdmin.Controls.Add(this.label12);
+            this.TpgAdmin.Location = new System.Drawing.Point(4, 25);
+            this.TpgAdmin.Name = "TpgAdmin";
+            this.TpgAdmin.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgAdmin.Size = new System.Drawing.Size(975, 643);
+            this.TpgAdmin.TabIndex = 5;
+            this.TpgAdmin.Text = "Admin Ekle - Sil";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(187, 107);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(45, 16);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Kişi Id:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(186, 146);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 16);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Üye Id";
+            // 
+            // TxtKisiIdAdmin
+            // 
+            this.TxtKisiIdAdmin.Location = new System.Drawing.Point(261, 107);
+            this.TxtKisiIdAdmin.Name = "TxtKisiIdAdmin";
+            this.TxtKisiIdAdmin.Size = new System.Drawing.Size(100, 22);
+            this.TxtKisiIdAdmin.TabIndex = 2;
+            // 
+            // TxtUyeIdAdmin
+            // 
+            this.TxtUyeIdAdmin.Location = new System.Drawing.Point(261, 140);
+            this.TxtUyeIdAdmin.Name = "TxtUyeIdAdmin";
+            this.TxtUyeIdAdmin.Size = new System.Drawing.Size(100, 22);
+            this.TxtUyeIdAdmin.TabIndex = 2;
+            // 
+            // BtnAdminEkle
+            // 
+            this.BtnAdminEkle.Location = new System.Drawing.Point(286, 174);
+            this.BtnAdminEkle.Name = "BtnAdminEkle";
+            this.BtnAdminEkle.Size = new System.Drawing.Size(75, 46);
+            this.BtnAdminEkle.TabIndex = 3;
+            this.BtnAdminEkle.Text = "Admin Ekle";
+            this.BtnAdminEkle.UseVisualStyleBackColor = true;
+            this.BtnAdminEkle.Click += new System.EventHandler(this.BtnAdminEkle_Click);
+            // 
+            // LstKisiUyeBilgileri
+            // 
+            this.LstKisiUyeBilgileri.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LstKisiUyeBilgileri.FormattingEnabled = true;
+            this.LstKisiUyeBilgileri.ItemHeight = 16;
+            this.LstKisiUyeBilgileri.Location = new System.Drawing.Point(554, 3);
+            this.LstKisiUyeBilgileri.Name = "LstKisiUyeBilgileri";
+            this.LstKisiUyeBilgileri.Size = new System.Drawing.Size(418, 637);
+            this.LstKisiUyeBilgileri.TabIndex = 4;
+            // 
+            // BtnAdminlikSil
+            // 
+            this.BtnAdminlikSil.Location = new System.Drawing.Point(286, 345);
+            this.BtnAdminlikSil.Name = "BtnAdminlikSil";
+            this.BtnAdminlikSil.Size = new System.Drawing.Size(75, 48);
+            this.BtnAdminlikSil.TabIndex = 5;
+            this.BtnAdminlikSil.Text = "Adminlik Sil";
+            this.BtnAdminlikSil.UseVisualStyleBackColor = true;
+            this.BtnAdminlikSil.Click += new System.EventHandler(this.BtnAdminlikSil_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(187, 271);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 16);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "RollId";
+            // 
+            // TxtRollId
+            // 
+            this.TxtRollId.Location = new System.Drawing.Point(261, 271);
+            this.TxtRollId.Name = "TxtRollId";
+            this.TxtRollId.Size = new System.Drawing.Size(100, 22);
+            this.TxtRollId.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(186, 308);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(42, 16);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "RollId";
+            // 
+            // CmbKullaniciRolleri
+            // 
+            this.CmbKullaniciRolleri.FormattingEnabled = true;
+            this.CmbKullaniciRolleri.Location = new System.Drawing.Point(261, 305);
+            this.CmbKullaniciRolleri.Name = "CmbKullaniciRolleri";
+            this.CmbKullaniciRolleri.Size = new System.Drawing.Size(100, 24);
+            this.CmbKullaniciRolleri.TabIndex = 8;
             // 
             // FrmAdminPaneli
             // 
@@ -762,7 +963,6 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "FrmAdminPaneli";
             this.Text = "AdminPaneli";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmAdminPaneli_Load);
             this.PnlSolMenu.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
@@ -776,6 +976,10 @@
             this.TpgUrunKategoriEkle.PerformLayout();
             this.TpgUrunEkle.ResumeLayout(false);
             this.TpgUrunEkle.PerformLayout();
+            this.TpgUyeSil.ResumeLayout(false);
+            this.TpgUyeSil.PerformLayout();
+            this.TpgAdmin.ResumeLayout(false);
+            this.TpgAdmin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -809,7 +1013,7 @@
         private System.Windows.Forms.TabPage TpgMasaEkle;
         private System.Windows.Forms.TabPage TpgUrunKategoriEkle;
         private System.Windows.Forms.TabPage TpgUrunEkle;
-        private System.Windows.Forms.TabPage TpgUyeEkle;
+        private System.Windows.Forms.TabPage TpgUyeSil;
         private System.Windows.Forms.Button BtnUyeEkleBuyuk;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtMasaKategoriAdi;
@@ -849,5 +1053,23 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CmbUrunTuru;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnUyeEkle;
+        private System.Windows.Forms.Button BtnUyeSilBuyuk;
+        private System.Windows.Forms.Button btnUyeSil;
+        private System.Windows.Forms.TextBox TxtUyeId;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox LstUye;
+        private System.Windows.Forms.TabPage TpgAdmin;
+        private System.Windows.Forms.ListBox LstKisiUyeBilgileri;
+        private System.Windows.Forms.Button BtnAdminEkle;
+        private System.Windows.Forms.TextBox TxtUyeIdAdmin;
+        private System.Windows.Forms.TextBox TxtKisiIdAdmin;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox TxtRollId;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button BtnAdminlikSil;
+        private System.Windows.Forms.ComboBox CmbKullaniciRolleri;
+        private System.Windows.Forms.Label label17;
     }
 }
