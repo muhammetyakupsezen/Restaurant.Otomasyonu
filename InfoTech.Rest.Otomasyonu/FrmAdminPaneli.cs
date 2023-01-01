@@ -17,31 +17,30 @@ namespace InfoTech.Rest.Otomasyonu
         TYoneticiIslemleri yoneticiIslemleri;
         TblMasaKategorileri tblMasaKategorileri;
         TMasaIslemleri masaIslemleri;
+        UrunIslemleri urunIslemleri;
         public FrmAdminPaneli()
         {
             InitializeComponent();
             yoneticiIslemleri = new TYoneticiIslemleri();
             masaIslemleri = new TMasaIslemleri();
+            urunIslemleri = new UrunIslemleri();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            LstMasaKategorileri.Items.Clear();
+            FrmAdminPaneli_Load(sender, e);
         }
 
-        private void BtnMasaKategoriEkle_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void FrmAdminPaneli_Load(object sender, EventArgs e)
         {
-            tblMasaKategorileri = new TblMasaKategorileri();
+            // tblMasaKategorileri = new TblMasaKategorileri();
             List<TblMasaKategorileri> MasaKategorileriListesi = yoneticiIslemleri.MasaKategorileriGoster();
             foreach (var MasaKategori in MasaKategorileriListesi)
             {
-                int KategoriId = CmbMasaKategorileri.Items.Add(MasaKategori.MasaKategoriAdi);
-
+                int KategoriId = CmbMasaKategorileri.Items.Add(MasaKategori.MasaKategoriId);
             }
 
             var MasaKategoriListesi = masaIslemleri.MasaKategorileri();
@@ -50,11 +49,11 @@ namespace InfoTech.Rest.Otomasyonu
 
             ////////////////////////////////////////
 
-            TblMasalar tblMasalar = new TblMasalar();
+            //  TblMasalar tblMasalar = new TblMasalar();
             List<TblMasalar> MasaListesi = yoneticiIslemleri.MasalariGoster();
             foreach (var Masa in MasaListesi)
             {
-                var SeciliMasa = CmbMasaAdi.Items.Add(Masa.MasaAdi);
+                var SeciliMasa = CmbMasaAdi.Items.Add(Masa.MasaId);
             }
 
             var Masalar = masaIslemleri.Masalar();
@@ -62,6 +61,51 @@ namespace InfoTech.Rest.Otomasyonu
             {
                 LstMasaAdi.Items.Add(Masa.MasaId + " " + Masa.MasaAdi);
             }
+            ///////////////////////////////////////////////////////
+
+            List<TblKategori> UrunKategorileri = urunIslemleri.Kategoriler();
+            foreach (var Kategori in UrunKategorileri)
+            {
+                var UrunKategoriCmb = CmbSilinecekUrunKategoriId.Items.Add(Kategori.KategoriId);
+            }
+
+            List<TblKategori> UrunKategoriListesi = urunIslemleri.Kategoriler();
+            foreach (var UrunKategori in UrunKategoriListesi)
+            {
+                LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+            }
+
+            ////////////////////////////////////////////////////////////////////////////
+
+            List<TblUrun> UrunListesi = urunIslemleri.UrunListesi();
+            foreach (var Urun in UrunListesi)
+            {
+                int UrunId = CmbUrunId.Items.Add(Urun.UrunId);
+
+            }
+
+            List<TblUrun> UrunlerListesi = urunIslemleri.UrunListesi();
+            foreach (var Urun in UrunlerListesi)
+            {
+                LstUrunListesi.Items.Add(Urun.UrunId + "" + Urun.UrunAdi);
+            }
+
+            //  List<TblUrunKategorileri> UrunKategorileriListesi=   urunIslemleri.UrunKategorileriListesi();
+            List<TblUrunKategorileri> UrununKategorileri = urunIslemleri.UrunKategorileriListesi();
+            foreach (var UrunKategorisi in UrununKategorileri)
+            {
+                int SeciliId = CmbSecilecekUrunKategorisi.Items.Add(UrunKategorisi.KategoriId);
+            }
+
+            List<TblKategori> UrununTurleri = urunIslemleri.Kategoriler();
+            foreach (var Kategori in UrunKategorileri)
+            {
+                var UrunKategoriCmb = CmbUrunTuru.Items.Add(Kategori.KategoriId);
+            }
+            //foreach (var Kategori in UrunKategorileri)
+            //{
+            //    var UrunKategoriCmb = CmbSilinecekUrunKategoriId.Items.Add(Kategori.KategoriId);
+            //}
 
 
         }
@@ -89,7 +133,7 @@ namespace InfoTech.Rest.Otomasyonu
             {
                 MessageBox.Show("Masa Kategorisi ekleme Başarılı ");
             }
-            //   TMasaIslemleri masaIslemleri = new TMasaIslemleri();
+
             var MasaKategoriListesi = masaIslemleri.MasaKategorileri();
             foreach (var MasaKategori in MasaKategoriListesi)
                 LstMasaKategorileri.Items.Add(MasaKategori.MasaKategoriAdi);
@@ -117,10 +161,19 @@ namespace InfoTech.Rest.Otomasyonu
                 LstMasaKategorileri.Items.Add(MasaKategori.MasaKategoriId + " " + MasaKategori.MasaKategoriAdi);
 
 
-            // int MasaKategoriID = Convert.ToInt32(CmbMasaKategorileri.SelectedItem.ToString());
-            int MasaKategoriID = Convert.ToInt32(TxtMasaKategoriId.Text.Trim());
+            int SelectedItem = Convert.ToInt32(CmbMasaKategorileri.SelectedItem);
 
-            bool basarili = yoneticiIslemleri.MasaKategoriSil(MasaKategoriID, out HataMesaji);
+            TblMasaKategorileri tblMasaKategorileri = new TblMasaKategorileri();
+            tblMasaKategorileri.MasaKategoriId = SelectedItem;
+
+
+            CmbMasaKategorileri.Items.Remove(CmbMasaKategorileri.SelectedItem);
+
+
+
+
+
+            bool basarili = yoneticiIslemleri.MasaKategoriSil(tblMasaKategorileri.MasaKategoriId, out HataMesaji);
 
             if (!basarili)
             {
@@ -145,7 +198,7 @@ namespace InfoTech.Rest.Otomasyonu
         //   var x = CmbMasaKategorileri.SelectedItem.ToString();
         //}
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e) //( masa ekle butonu)
         {
             LstMasaAdi.Items.Clear();
 
@@ -174,7 +227,7 @@ namespace InfoTech.Rest.Otomasyonu
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e) //(masa sil butonu)
         {
             LstMasaAdi.Items.Clear();
 
@@ -185,10 +238,15 @@ namespace InfoTech.Rest.Otomasyonu
             }
 
 
-            // var seciliMasa= CmbMasaAdi.SelectedItem.ToString();
+
+
+            int SelectedTable = Convert.ToInt32(CmbMasaAdi.SelectedItem);
 
             TblMasalar tblMasa = new TblMasalar();
-            tblMasa.MasaId = Convert.ToInt32(TxtMasaId.Text.Trim());
+            tblMasa.MasaId = SelectedTable;
+
+
+
 
             string hataMesaji = "";
             bool basarili = yoneticiIslemleri.MasaSil(tblMasa.MasaId, out hataMesaji);
@@ -201,15 +259,306 @@ namespace InfoTech.Rest.Otomasyonu
             {
                 MessageBox.Show("Masa başarıyla silindi");
                 LstMasaAdi.Items.Clear();
-                 Masalar = masaIslemleri.Masalar();
+                Masalar = masaIslemleri.Masalar();
                 foreach (var Masa in Masalar)
                 {
                     LstMasaAdi.Items.Add(Masa.MasaId + " " + Masa.MasaAdi);
                 }
 
             }
+        }
+
+        /////////////////////////////////////////////////
+        private void BtnUrunKategoriEkle_Click(object sender, EventArgs e)
+        {
+            LstUrunKategorileri.Items.Clear();
+
+            List<TblKategori> UrunKategoriListesi = urunIslemleri.Kategoriler();
+            foreach (var UrunKategori in UrunKategoriListesi)
+            {
+                LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+            }
+
+            TblKategori tblKategori = new TblKategori();
+            tblKategori.KategoriAdi = TxtUrunKategoriAdi.Text.Trim();
+
+
+            bool basarili = yoneticiIslemleri.UrunKategoriEkle(tblKategori, out string Mesaj);
+
+            if (!basarili)
+            {
+                MessageBox.Show(Mesaj);
+            }
+            else
+            {
+                MessageBox.Show("Ürün kategorisi başarıyla eklendi");
+                LstUrunKategorileri.Items.Clear();
+
+
+                UrunKategoriListesi = urunIslemleri.Kategoriler();
+                foreach (var UrunKategori in UrunKategoriListesi)
+                {
+                    LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+                }
+
+            }
+        }
+
+        private void BtnUrunKategoriSil_Click(object sender, EventArgs e)
+        {
+            //LstUrunKategorileri.Items.Clear();
+            //var UrunKategoriListesi = urunIslemleri.Kategoriler();
+            //foreach (var UrunKategori in UrunKategoriListesi)
+            //{
+            //    LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+            //}
+
+
+            //TblKategori tblKategori = new TblKategori();
+            //tblKategori.KategoriId = Convert.ToInt32(TxtSilinecekUrunKategoriId.Text.ToString());
+
+            ////   int KategoriId = Convert.ToInt32(CmbSilinecekUrunKategoriId.SelectedIndex.ToString());
+
+            //string message;
+            //bool basarili = yoneticiIslemleri.UrunKategoriSil(tblKategori.KategoriId, out message);
+
+
+            //if (!basarili)
+            //{
+            //    MessageBox.Show("Ürün Kategorisi silinemedi");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ürün Kategorisi silindi");
+            //    LstUrunKategorileri.Items.Clear();
+
+
+            //    UrunKategoriListesi = urunIslemleri.Kategoriler();
+            //    foreach (var UrunKategori in UrunKategoriListesi)
+            //    {
+            //        LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+            //    }
+
+            //}
+            int selecteditem = Convert.ToInt32(CmbSilinecekUrunKategoriId.SelectedItem);
+
+            LstUrunKategorileri.Items.Clear();
+            var UrunKategoriListesi = urunIslemleri.Kategoriler();
+            foreach (var UrunKategori in UrunKategoriListesi)
+            {
+                LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+            }
+
+
+            TblKategori tblKategori = new TblKategori();
+
+
+            CmbSilinecekUrunKategoriId.Items.Remove(CmbSilinecekUrunKategoriId.SelectedItem);
+
+
+
+            tblKategori.KategoriId = selecteditem;
+
+
+
+
+            string message;
+            bool basarili = yoneticiIslemleri.UrunKategoriSil(tblKategori.KategoriId, out message);
+
+
+            if (!basarili)
+            {
+                MessageBox.Show("Ürün Kategorisi silinemedi");
+            }
+            else
+            {
+                MessageBox.Show("Ürün Kategorisi silindi");
+                LstUrunKategorileri.Items.Clear();
+
+
+                UrunKategoriListesi = urunIslemleri.Kategoriler();
+                foreach (var UrunKategori in UrunKategoriListesi)
+                {
+                    LstUrunKategorileri.Items.Add(UrunKategori.KategoriId + " " + UrunKategori.KategoriAdi);
+                }
+
+            }
+
+        }
+
+        //////////////////////////////////////////////////////////////
+
+        private void BtnUrunEkle_Click(object sender, EventArgs e)
+        {
+            LstUrunListesi.Items.Clear();
+
+
+            List<TblUrun> UrunListesi = urunIslemleri.UrunListesi();
+            foreach (var Urun in UrunListesi)
+            {
+                LstUrunListesi.Items.Add(Urun.UrunId + " " + Urun.UrunAdi);
+            }
+
+
+            int SeciliUrunKategori = Convert.ToInt32(CmbSecilecekUrunKategorisi.SelectedItem);
+            int UrunTuru = Convert.ToInt32(CmbUrunTuru.SelectedItem);
+
+            string Message;
+            TblUrun tblUrun = new TblUrun();
+          
+            //tblUrun.TblUrunStok = null;
+            //tblUrun.TblUrunFiyat = null;
+            //tblUrun.TblUrunHareketleri = null;
+            //tblUrun.TblUrunKategorileri = null;
+           
+            tblUrun.UrunAdi = TxtUrunAdi.Text.Trim();
+            tblUrun.Barkod = TxtBarkod.Text.Trim();
+
+            //TblKategori tblKategori = new TblKategori();
+            //tblKategori.KategoriId = UrunTuru;
+            //tblKategori.KategoriAdi = "yemek";
+          //  tblKategori.TblUrunKategorileri = null;
+
+            //TblUrunKategorileri tblUrunKategorileri = new TblUrunKategorileri();
+            //tblUrunKategorileri.UrunId = tblUrun.UrunId;
+            //tblUrunKategorileri.KategoriId = UrunTuru ;
+            //tblUrunKategorileri.TblUrun = tblUrun;
+            //tblUrunKategorileri.TblKategori = tblKategori;
+
+
+
+
+
+            bool basarili = yoneticiIslemleri.UrunEkle(tblUrun, /*tblUrunKategorileri,*/ /*tblKategori,*/ out Message);
+
+            if (!basarili)
+            {
+                MessageBox.Show(Message);
+            }
+            else
+            {
+                MessageBox.Show("ürün ekleme başarılı");
+                LstUrunListesi.Items.Clear();
+
+                UrunListesi = urunIslemleri.UrunListesi();
+                foreach (var Urun in UrunListesi)
+                {
+                    LstUrunListesi.Items.Add(Urun.UrunId + " " + Urun.UrunAdi);
+                }
+
+                string YeniMesaj;
+
+
+                TblUrunKategorileri tblUrunKategorileri = new TblUrunKategorileri();
+                tblUrunKategorileri.UrunId = tblUrun.UrunId;
+                tblUrunKategorileri.KategoriId = UrunTuru;
+
+               bool success = yoneticiIslemleri.UrunKategoriTablosuEkle(tblUrunKategorileri, out YeniMesaj);
+
+                if (!success)
+                {
+                    YeniMesaj = "Ürün kategori ekleme başarısız";
+                }
+                else
+                {
+                    MessageBox.Show("ürün Kategori ekleme başarılı");
+                }
+
+            }
 
 
         }
+
+
+        private void BtnUrunSil_Click(object sender, EventArgs e)
+        {
+            LstUrunListesi.Items.Clear();
+
+            List<TblUrun> UrunListesi = urunIslemleri.UrunListesi();
+            foreach (var Urun in UrunListesi)
+            {
+                LstUrunListesi.Items.Add(Urun.UrunId + " " + Urun.UrunAdi);
+            }
+
+
+            int SelectedItem = CmbUrunId.SelectedIndex;
+            TblUrun tblUrun = new TblUrun();
+            tblUrun.UrunId = SelectedItem;
+
+            CmbUrunId.Items.Remove(CmbUrunId.SelectedIndex);
+
+            string message;
+            bool basarili = yoneticiIslemleri.UrunSil(tblUrun.UrunId, out message);
+
+
+            if (!basarili)
+            {
+                MessageBox.Show(message);
+            }
+            else
+            {
+                MessageBox.Show("Ürün başarıyla eklendi");
+
+                LstUrunListesi.Items.Clear();
+
+                UrunListesi = urunIslemleri.UrunListesi();
+                foreach (var Urun in UrunListesi)
+                {
+                    LstUrunListesi.Items.Add(Urun.UrunId + " " + Urun.UrunAdi);
+                }
+
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void BtnMasaKategoriEkle_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(TpgMasaKategoriEkle);
+            //https://stackoverflow.com/questions/21691703/open-tab-pages-on-button-click-in-winform-c-sharp
+        }
+
+        private void BtnMasaEkle_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(TpgMasaEkle);
+        }
+
+        private void BtnUrunKategoriEkle2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab(TpgUrunKategoriEkle);
+        }
+
+        private void button1_Click(object sender, EventArgs e) //BtnUrunEkleBuyuk Buton
+        {
+            tabControl1.SelectTab(TpgUrunEkle);
+        }
+
+        private void button2_Click(object sender, EventArgs e) // BtnUüyükButonyeEkle B
+        {
+            tabControl1.SelectTab(TpgUyeEkle);
+        }
+
+
     }
 }

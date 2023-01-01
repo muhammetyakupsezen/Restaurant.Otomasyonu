@@ -70,7 +70,7 @@
             this.TxtKullaniciAdi.Name = "TxtKullaniciAdi";
             this.TxtKullaniciAdi.Size = new System.Drawing.Size(132, 29);
             this.TxtKullaniciAdi.TabIndex = 2;
-            this.TxtKullaniciAdi.Text = "tuncgulec";
+            this.TxtKullaniciAdi.Text = "ahmet";
             // 
             // TxtSifre
             // 
@@ -81,7 +81,7 @@
             this.TxtSifre.PasswordChar = '*';
             this.TxtSifre.Size = new System.Drawing.Size(132, 29);
             this.TxtSifre.TabIndex = 3;
-            this.TxtSifre.Text = "123";
+            this.TxtSifre.Text = "222";
             // 
             // BtnGiris
             // 

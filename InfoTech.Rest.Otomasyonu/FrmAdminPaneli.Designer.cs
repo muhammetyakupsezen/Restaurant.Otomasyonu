@@ -30,24 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.splitter2 = new System.Windows.Forms.Splitter();
-            this.TxtUrunArama = new System.Windows.Forms.TextBox();
-            this.LblAdisyonNo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LblAdisyonTutar = new System.Windows.Forms.Label();
-            this.LblMasa = new System.Windows.Forms.Label();
-            this.PnlAdisyonUrunler = new System.Windows.Forms.Panel();
-            this.PnlAdisyonDetay = new System.Windows.Forms.Panel();
-            this.PnlAdisyon = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.BtnUyeEkle = new System.Windows.Forms.Button();
+            this.BtnUrunKategoriEkle2 = new System.Windows.Forms.Button();
             this.BtnMasaEkle = new System.Windows.Forms.Button();
             this.PnlSolMenu = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnUyeEkleBuyuk = new System.Windows.Forms.Button();
             this.BtnMasaKategori = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -74,174 +61,57 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TxtMasaKategoriAdi = new System.Windows.Forms.TextBox();
             this.TpgMasaEkle = new System.Windows.Forms.TabPage();
-            this.TpgUrunKategoriEkle = new System.Windows.Forms.TabPage();
-            this.TpgUrunEkle = new System.Windows.Forms.TabPage();
-            this.TpgUyeEkle = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtMasaKategoriId = new System.Windows.Forms.TextBox();
-            this.TxtMasaId = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.BtnSil = new System.Windows.Forms.Button();
             this.CmbMasaAdi = new System.Windows.Forms.ComboBox();
             this.LstMasaAdi = new System.Windows.Forms.ListBox();
             this.BtnMasayıEkle = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TxtMasaAdi = new System.Windows.Forms.TextBox();
-            this.TxtMasaKategoriID2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.PnlAdisyonDetay.SuspendLayout();
-            this.PnlAdisyon.SuspendLayout();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtMasaKategoriID2 = new System.Windows.Forms.TextBox();
+            this.TxtMasaAdi = new System.Windows.Forms.TextBox();
+            this.TpgUrunKategoriEkle = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TxtUrunKategoriAdi = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.BtnUrunKategoriSil = new System.Windows.Forms.Button();
+            this.CmbSilinecekUrunKategoriId = new System.Windows.Forms.ComboBox();
+            this.LstUrunKategorileri = new System.Windows.Forms.ListBox();
+            this.BtnUrunKategoriEkle = new System.Windows.Forms.Button();
+            this.TpgUrunEkle = new System.Windows.Forms.TabPage();
+            this.TxtBarkod = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TxtUrunAdi = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnUrunSil = new System.Windows.Forms.Button();
+            this.CmbUrunId = new System.Windows.Forms.ComboBox();
+            this.LstUrunListesi = new System.Windows.Forms.ListBox();
+            this.BtnUrunEkle = new System.Windows.Forms.Button();
+            this.TpgUyeEkle = new System.Windows.Forms.TabPage();
+            this.BtnEkraniYenile = new System.Windows.Forms.Button();
+            this.BtnUrunEkleBuyuk = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CmbSecilecekUrunKategorisi = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CmbUrunTuru = new System.Windows.Forms.ComboBox();
             this.PnlSolMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.TpgMasaKategoriEkle.SuspendLayout();
             this.TpgMasaEkle.SuspendLayout();
+            this.TpgUrunKategoriEkle.SuspendLayout();
+            this.TpgUrunEkle.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(610, 0);
+            this.splitter2.Location = new System.Drawing.Point(277, 0);
             this.splitter2.Margin = new System.Windows.Forms.Padding(4);
             this.splitter2.Name = "splitter2";
             this.splitter2.Size = new System.Drawing.Size(4, 672);
             this.splitter2.TabIndex = 13;
             this.splitter2.TabStop = false;
-            // 
-            // TxtUrunArama
-            // 
-            this.TxtUrunArama.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtUrunArama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtUrunArama.Location = new System.Drawing.Point(0, 38);
-            this.TxtUrunArama.Margin = new System.Windows.Forms.Padding(4);
-            this.TxtUrunArama.Name = "TxtUrunArama";
-            this.TxtUrunArama.Size = new System.Drawing.Size(333, 30);
-            this.TxtUrunArama.TabIndex = 1;
-            // 
-            // LblAdisyonNo
-            // 
-            this.LblAdisyonNo.AutoSize = true;
-            this.LblAdisyonNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblAdisyonNo.ForeColor = System.Drawing.Color.White;
-            this.LblAdisyonNo.Location = new System.Drawing.Point(129, 87);
-            this.LblAdisyonNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblAdisyonNo.Name = "LblAdisyonNo";
-            this.LblAdisyonNo.Size = new System.Drawing.Size(91, 29);
-            this.LblAdisyonNo.TabIndex = 5;
-            this.LblAdisyonNo.Text = "111445";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 87);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 29);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Adisyon:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(8, 49);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Toplam :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Masa:";
-            // 
-            // LblAdisyonTutar
-            // 
-            this.LblAdisyonTutar.AutoSize = true;
-            this.LblAdisyonTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblAdisyonTutar.ForeColor = System.Drawing.Color.White;
-            this.LblAdisyonTutar.Location = new System.Drawing.Point(129, 49);
-            this.LblAdisyonTutar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblAdisyonTutar.Name = "LblAdisyonTutar";
-            this.LblAdisyonTutar.Size = new System.Drawing.Size(52, 29);
-            this.LblAdisyonTutar.TabIndex = 1;
-            this.LblAdisyonTutar.Text = "120";
-            // 
-            // LblMasa
-            // 
-            this.LblMasa.AutoSize = true;
-            this.LblMasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblMasa.ForeColor = System.Drawing.Color.White;
-            this.LblMasa.Location = new System.Drawing.Point(129, 11);
-            this.LblMasa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblMasa.Name = "LblMasa";
-            this.LblMasa.Size = new System.Drawing.Size(115, 29);
-            this.LblMasa.TabIndex = 0;
-            this.LblMasa.Text = "Masa No:";
-            // 
-            // PnlAdisyonUrunler
-            // 
-            this.PnlAdisyonUrunler.AutoScroll = true;
-            this.PnlAdisyonUrunler.BackColor = System.Drawing.Color.Gray;
-            this.PnlAdisyonUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlAdisyonUrunler.Location = new System.Drawing.Point(0, 68);
-            this.PnlAdisyonUrunler.Margin = new System.Windows.Forms.Padding(4);
-            this.PnlAdisyonUrunler.Name = "PnlAdisyonUrunler";
-            this.PnlAdisyonUrunler.Size = new System.Drawing.Size(333, 481);
-            this.PnlAdisyonUrunler.TabIndex = 3;
-            // 
-            // PnlAdisyonDetay
-            // 
-            this.PnlAdisyonDetay.Controls.Add(this.LblAdisyonNo);
-            this.PnlAdisyonDetay.Controls.Add(this.label4);
-            this.PnlAdisyonDetay.Controls.Add(this.label3);
-            this.PnlAdisyonDetay.Controls.Add(this.label2);
-            this.PnlAdisyonDetay.Controls.Add(this.LblAdisyonTutar);
-            this.PnlAdisyonDetay.Controls.Add(this.LblMasa);
-            this.PnlAdisyonDetay.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlAdisyonDetay.Location = new System.Drawing.Point(0, 549);
-            this.PnlAdisyonDetay.Margin = new System.Windows.Forms.Padding(4);
-            this.PnlAdisyonDetay.Name = "PnlAdisyonDetay";
-            this.PnlAdisyonDetay.Size = new System.Drawing.Size(333, 123);
-            this.PnlAdisyonDetay.TabIndex = 2;
-            // 
-            // PnlAdisyon
-            // 
-            this.PnlAdisyon.BackColor = System.Drawing.Color.DimGray;
-            this.PnlAdisyon.Controls.Add(this.PnlAdisyonUrunler);
-            this.PnlAdisyon.Controls.Add(this.PnlAdisyonDetay);
-            this.PnlAdisyon.Controls.Add(this.TxtUrunArama);
-            this.PnlAdisyon.Controls.Add(this.label1);
-            this.PnlAdisyon.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlAdisyon.Location = new System.Drawing.Point(277, 0);
-            this.PnlAdisyon.Margin = new System.Windows.Forms.Padding(4);
-            this.PnlAdisyon.Name = "PnlAdisyon";
-            this.PnlAdisyon.Size = new System.Drawing.Size(333, 672);
-            this.PnlAdisyon.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(333, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "İşlemler";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // splitter1
             // 
@@ -252,16 +122,17 @@
             this.splitter1.TabIndex = 11;
             this.splitter1.TabStop = false;
             // 
-            // BtnUyeEkle
+            // BtnUrunKategoriEkle2
             // 
-            this.BtnUyeEkle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnUyeEkle.Location = new System.Drawing.Point(0, 148);
-            this.BtnUyeEkle.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnUyeEkle.Name = "BtnUyeEkle";
-            this.BtnUyeEkle.Size = new System.Drawing.Size(267, 74);
-            this.BtnUyeEkle.TabIndex = 2;
-            this.BtnUyeEkle.Text = "Üye Ekle";
-            this.BtnUyeEkle.UseVisualStyleBackColor = true;
+            this.BtnUrunKategoriEkle2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUrunKategoriEkle2.Location = new System.Drawing.Point(0, 148);
+            this.BtnUrunKategoriEkle2.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnUrunKategoriEkle2.Name = "BtnUrunKategoriEkle2";
+            this.BtnUrunKategoriEkle2.Size = new System.Drawing.Size(267, 74);
+            this.BtnUrunKategoriEkle2.TabIndex = 2;
+            this.BtnUrunKategoriEkle2.Text = "Ürün Kategori Ekle";
+            this.BtnUrunKategoriEkle2.UseVisualStyleBackColor = true;
+            this.BtnUrunKategoriEkle2.Click += new System.EventHandler(this.BtnUrunKategoriEkle2_Click);
             // 
             // BtnMasaEkle
             // 
@@ -273,14 +144,15 @@
             this.BtnMasaEkle.TabIndex = 1;
             this.BtnMasaEkle.Text = "Masa Ekle";
             this.BtnMasaEkle.UseVisualStyleBackColor = true;
+            this.BtnMasaEkle.Click += new System.EventHandler(this.BtnMasaEkle_Click);
             // 
             // PnlSolMenu
             // 
             this.PnlSolMenu.AutoScroll = true;
-            this.PnlSolMenu.Controls.Add(this.button3);
-            this.PnlSolMenu.Controls.Add(this.button2);
-            this.PnlSolMenu.Controls.Add(this.button1);
-            this.PnlSolMenu.Controls.Add(this.BtnUyeEkle);
+            this.PnlSolMenu.Controls.Add(this.BtnEkraniYenile);
+            this.PnlSolMenu.Controls.Add(this.BtnUyeEkleBuyuk);
+            this.PnlSolMenu.Controls.Add(this.BtnUrunEkleBuyuk);
+            this.PnlSolMenu.Controls.Add(this.BtnUrunKategoriEkle2);
             this.PnlSolMenu.Controls.Add(this.BtnMasaEkle);
             this.PnlSolMenu.Controls.Add(this.BtnMasaKategori);
             this.PnlSolMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -290,39 +162,17 @@
             this.PnlSolMenu.Size = new System.Drawing.Size(267, 672);
             this.PnlSolMenu.TabIndex = 10;
             // 
-            // button3
+            // BtnUyeEkleBuyuk
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Location = new System.Drawing.Point(0, 370);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(267, 74);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Üye Ekle";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Location = new System.Drawing.Point(0, 296);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(267, 74);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Üye Ekle";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 222);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(267, 74);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Üye Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnUyeEkleBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUyeEkleBuyuk.Location = new System.Drawing.Point(0, 296);
+            this.BtnUyeEkleBuyuk.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnUyeEkleBuyuk.Name = "BtnUyeEkleBuyuk";
+            this.BtnUyeEkleBuyuk.Size = new System.Drawing.Size(267, 74);
+            this.BtnUyeEkleBuyuk.TabIndex = 4;
+            this.BtnUyeEkleBuyuk.Text = "Üye Ekle";
+            this.BtnUyeEkleBuyuk.UseVisualStyleBackColor = true;
+            this.BtnUyeEkleBuyuk.Click += new System.EventHandler(this.button2_Click);
             // 
             // BtnMasaKategori
             // 
@@ -464,18 +314,16 @@
             this.tabControl1.Controls.Add(this.TpgUrunEkle);
             this.tabControl1.Controls.Add(this.TpgUyeEkle);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(614, 0);
+            this.tabControl1.Location = new System.Drawing.Point(281, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(650, 672);
+            this.tabControl1.Size = new System.Drawing.Size(983, 672);
             this.tabControl1.TabIndex = 14;
             this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // TpgMasaKategoriEkle
             // 
             this.TpgMasaKategoriEkle.BackColor = System.Drawing.Color.Gray;
-            this.TpgMasaKategoriEkle.Controls.Add(this.TxtMasaKategoriId);
-            this.TpgMasaKategoriEkle.Controls.Add(this.label7);
             this.TpgMasaKategoriEkle.Controls.Add(this.label6);
             this.TpgMasaKategoriEkle.Controls.Add(this.BtnMasaKategoriSil);
             this.TpgMasaKategoriEkle.Controls.Add(this.CmbMasaKategorileri);
@@ -486,7 +334,7 @@
             this.TpgMasaKategoriEkle.Location = new System.Drawing.Point(4, 25);
             this.TpgMasaKategoriEkle.Name = "TpgMasaKategoriEkle";
             this.TpgMasaKategoriEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgMasaKategoriEkle.Size = new System.Drawing.Size(642, 643);
+            this.TpgMasaKategoriEkle.Size = new System.Drawing.Size(975, 643);
             this.TpgMasaKategoriEkle.TabIndex = 0;
             this.TpgMasaKategoriEkle.Text = "MasaKategoriEkle";
             this.TpgMasaKategoriEkle.Click += new System.EventHandler(this.TpgMasaKategoriEkle_Click);
@@ -494,7 +342,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 200);
+            this.label6.Location = new System.Drawing.Point(101, 205);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 6;
@@ -502,7 +350,7 @@
             // 
             // BtnMasaKategoriSil
             // 
-            this.BtnMasaKategoriSil.Location = new System.Drawing.Point(248, 280);
+            this.BtnMasaKategoriSil.Location = new System.Drawing.Point(346, 248);
             this.BtnMasaKategoriSil.Name = "BtnMasaKategoriSil";
             this.BtnMasaKategoriSil.Size = new System.Drawing.Size(75, 23);
             this.BtnMasaKategoriSil.TabIndex = 5;
@@ -513,23 +361,24 @@
             // CmbMasaKategorileri
             // 
             this.CmbMasaKategorileri.FormattingEnabled = true;
-            this.CmbMasaKategorileri.Location = new System.Drawing.Point(167, 197);
+            this.CmbMasaKategorileri.Location = new System.Drawing.Point(265, 202);
             this.CmbMasaKategorileri.Name = "CmbMasaKategorileri";
             this.CmbMasaKategorileri.Size = new System.Drawing.Size(156, 24);
             this.CmbMasaKategorileri.TabIndex = 4;
             // 
             // LstMasaKategorileri
             // 
+            this.LstMasaKategorileri.Dock = System.Windows.Forms.DockStyle.Right;
             this.LstMasaKategorileri.FormattingEnabled = true;
             this.LstMasaKategorileri.ItemHeight = 16;
-            this.LstMasaKategorileri.Location = new System.Drawing.Point(341, 70);
+            this.LstMasaKategorileri.Location = new System.Drawing.Point(523, 3);
             this.LstMasaKategorileri.Name = "LstMasaKategorileri";
-            this.LstMasaKategorileri.Size = new System.Drawing.Size(234, 388);
+            this.LstMasaKategorileri.Size = new System.Drawing.Size(449, 637);
             this.LstMasaKategorileri.TabIndex = 3;
             // 
             // BtnMasaKategoriEkle2
             // 
-            this.BtnMasaKategoriEkle2.Location = new System.Drawing.Point(248, 110);
+            this.BtnMasaKategoriEkle2.Location = new System.Drawing.Point(346, 115);
             this.BtnMasaKategoriEkle2.Name = "BtnMasaKategoriEkle2";
             this.BtnMasaKategoriEkle2.Size = new System.Drawing.Size(75, 23);
             this.BtnMasaKategoriEkle2.TabIndex = 2;
@@ -540,7 +389,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 73);
+            this.label5.Location = new System.Drawing.Point(117, 78);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 16);
             this.label5.TabIndex = 1;
@@ -548,7 +397,7 @@
             // 
             // TxtMasaKategoriAdi
             // 
-            this.TxtMasaKategoriAdi.Location = new System.Drawing.Point(167, 70);
+            this.TxtMasaKategoriAdi.Location = new System.Drawing.Point(265, 75);
             this.TxtMasaKategoriAdi.Name = "TxtMasaKategoriAdi";
             this.TxtMasaKategoriAdi.Size = new System.Drawing.Size(156, 22);
             this.TxtMasaKategoriAdi.TabIndex = 0;
@@ -556,8 +405,6 @@
             // TpgMasaEkle
             // 
             this.TpgMasaEkle.BackColor = System.Drawing.Color.Gray;
-            this.TpgMasaEkle.Controls.Add(this.TxtMasaId);
-            this.TpgMasaEkle.Controls.Add(this.label8);
             this.TpgMasaEkle.Controls.Add(this.label9);
             this.TpgMasaEkle.Controls.Add(this.BtnSil);
             this.TpgMasaEkle.Controls.Add(this.CmbMasaAdi);
@@ -570,76 +417,14 @@
             this.TpgMasaEkle.Location = new System.Drawing.Point(4, 25);
             this.TpgMasaEkle.Name = "TpgMasaEkle";
             this.TpgMasaEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgMasaEkle.Size = new System.Drawing.Size(642, 643);
+            this.TpgMasaEkle.Size = new System.Drawing.Size(975, 643);
             this.TpgMasaEkle.TabIndex = 1;
             this.TpgMasaEkle.Text = "MasaEkle";
-            // 
-            // TpgUrunKategoriEkle
-            // 
-            this.TpgUrunKategoriEkle.Location = new System.Drawing.Point(4, 25);
-            this.TpgUrunKategoriEkle.Name = "TpgUrunKategoriEkle";
-            this.TpgUrunKategoriEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgUrunKategoriEkle.Size = new System.Drawing.Size(642, 643);
-            this.TpgUrunKategoriEkle.TabIndex = 2;
-            this.TpgUrunKategoriEkle.Text = "UrunKategoriEkle";
-            this.TpgUrunKategoriEkle.UseVisualStyleBackColor = true;
-            // 
-            // TpgUrunEkle
-            // 
-            this.TpgUrunEkle.Location = new System.Drawing.Point(4, 25);
-            this.TpgUrunEkle.Name = "TpgUrunEkle";
-            this.TpgUrunEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgUrunEkle.Size = new System.Drawing.Size(642, 643);
-            this.TpgUrunEkle.TabIndex = 3;
-            this.TpgUrunEkle.Text = "UrunEkle";
-            this.TpgUrunEkle.UseVisualStyleBackColor = true;
-            // 
-            // TpgUyeEkle
-            // 
-            this.TpgUyeEkle.Location = new System.Drawing.Point(4, 25);
-            this.TpgUyeEkle.Name = "TpgUyeEkle";
-            this.TpgUyeEkle.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgUyeEkle.Size = new System.Drawing.Size(642, 643);
-            this.TpgUyeEkle.TabIndex = 4;
-            this.TpgUyeEkle.Text = "UyeEkle";
-            this.TpgUyeEkle.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 243);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 16);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Silinecek MasaKategori";
-            // 
-            // TxtMasaKategoriId
-            // 
-            this.TxtMasaKategoriId.Location = new System.Drawing.Point(167, 237);
-            this.TxtMasaKategoriId.Name = "TxtMasaKategoriId";
-            this.TxtMasaKategoriId.Size = new System.Drawing.Size(156, 22);
-            this.TxtMasaKategoriId.TabIndex = 7;
-            // 
-            // TxtMasaId
-            // 
-            this.TxtMasaId.Location = new System.Drawing.Point(199, 294);
-            this.TxtMasaId.Name = "TxtMasaId";
-            this.TxtMasaId.Size = new System.Drawing.Size(156, 22);
-            this.TxtMasaId.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 300);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Silinecek Masa Id";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 257);
+            this.label9.Location = new System.Drawing.Point(160, 253);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 16);
             this.label9.TabIndex = 15;
@@ -647,7 +432,7 @@
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(280, 337);
+            this.BtnSil.Location = new System.Drawing.Point(405, 297);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(75, 23);
             this.BtnSil.TabIndex = 13;
@@ -658,23 +443,24 @@
             // CmbMasaAdi
             // 
             this.CmbMasaAdi.FormattingEnabled = true;
-            this.CmbMasaAdi.Location = new System.Drawing.Point(199, 254);
+            this.CmbMasaAdi.Location = new System.Drawing.Point(324, 250);
             this.CmbMasaAdi.Name = "CmbMasaAdi";
             this.CmbMasaAdi.Size = new System.Drawing.Size(156, 24);
             this.CmbMasaAdi.TabIndex = 12;
             // 
             // LstMasaAdi
             // 
+            this.LstMasaAdi.Dock = System.Windows.Forms.DockStyle.Right;
             this.LstMasaAdi.FormattingEnabled = true;
             this.LstMasaAdi.ItemHeight = 16;
-            this.LstMasaAdi.Location = new System.Drawing.Point(373, 127);
+            this.LstMasaAdi.Location = new System.Drawing.Point(714, 3);
             this.LstMasaAdi.Name = "LstMasaAdi";
-            this.LstMasaAdi.Size = new System.Drawing.Size(234, 388);
+            this.LstMasaAdi.Size = new System.Drawing.Size(258, 637);
             this.LstMasaAdi.TabIndex = 11;
             // 
             // BtnMasayıEkle
             // 
-            this.BtnMasayıEkle.Location = new System.Drawing.Point(280, 184);
+            this.BtnMasayıEkle.Location = new System.Drawing.Point(405, 180);
             this.BtnMasayıEkle.Name = "BtnMasayıEkle";
             this.BtnMasayıEkle.Size = new System.Drawing.Size(75, 23);
             this.BtnMasayıEkle.TabIndex = 10;
@@ -682,37 +468,287 @@
             this.BtnMasayıEkle.UseVisualStyleBackColor = true;
             this.BtnMasayıEkle.Click += new System.EventHandler(this.button5_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(176, 157);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 16);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Masa KategoriId";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 130);
+            this.label10.Location = new System.Drawing.Point(176, 126);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 16);
             this.label10.TabIndex = 9;
             this.label10.Text = "Masa Adı";
             // 
-            // TxtMasaAdi
-            // 
-            this.TxtMasaAdi.Location = new System.Drawing.Point(199, 127);
-            this.TxtMasaAdi.Name = "TxtMasaAdi";
-            this.TxtMasaAdi.Size = new System.Drawing.Size(156, 22);
-            this.TxtMasaAdi.TabIndex = 8;
-            // 
             // TxtMasaKategoriID2
             // 
-            this.TxtMasaKategoriID2.Location = new System.Drawing.Point(199, 155);
+            this.TxtMasaKategoriID2.Location = new System.Drawing.Point(324, 151);
             this.TxtMasaKategoriID2.Name = "TxtMasaKategoriID2";
             this.TxtMasaKategoriID2.Size = new System.Drawing.Size(156, 22);
             this.TxtMasaKategoriID2.TabIndex = 8;
             // 
-            // label11
+            // TxtMasaAdi
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(51, 161);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 16);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Masa KategoriId";
+            this.TxtMasaAdi.Location = new System.Drawing.Point(324, 123);
+            this.TxtMasaAdi.Name = "TxtMasaAdi";
+            this.TxtMasaAdi.Size = new System.Drawing.Size(156, 22);
+            this.TxtMasaAdi.TabIndex = 8;
+            // 
+            // TpgUrunKategoriEkle
+            // 
+            this.TpgUrunKategoriEkle.BackColor = System.Drawing.Color.Gray;
+            this.TpgUrunKategoriEkle.Controls.Add(this.label16);
+            this.TpgUrunKategoriEkle.Controls.Add(this.TxtUrunKategoriAdi);
+            this.TpgUrunKategoriEkle.Controls.Add(this.label13);
+            this.TpgUrunKategoriEkle.Controls.Add(this.BtnUrunKategoriSil);
+            this.TpgUrunKategoriEkle.Controls.Add(this.CmbSilinecekUrunKategoriId);
+            this.TpgUrunKategoriEkle.Controls.Add(this.LstUrunKategorileri);
+            this.TpgUrunKategoriEkle.Controls.Add(this.BtnUrunKategoriEkle);
+            this.TpgUrunKategoriEkle.Location = new System.Drawing.Point(4, 25);
+            this.TpgUrunKategoriEkle.Name = "TpgUrunKategoriEkle";
+            this.TpgUrunKategoriEkle.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgUrunKategoriEkle.Size = new System.Drawing.Size(975, 643);
+            this.TpgUrunKategoriEkle.TabIndex = 2;
+            this.TpgUrunKategoriEkle.Text = "UrunKategoriEkle";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(186, 141);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(111, 16);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "Ürün Kategori Adı";
+            // 
+            // TxtUrunKategoriAdi
+            // 
+            this.TxtUrunKategoriAdi.Location = new System.Drawing.Point(350, 138);
+            this.TxtUrunKategoriAdi.Name = "TxtUrunKategoriAdi";
+            this.TxtUrunKategoriAdi.Size = new System.Drawing.Size(156, 22);
+            this.TxtUrunKategoriAdi.TabIndex = 29;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(173, 254);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(146, 16);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Silinecek Ürün Kategori";
+            // 
+            // BtnUrunKategoriSil
+            // 
+            this.BtnUrunKategoriSil.Location = new System.Drawing.Point(431, 297);
+            this.BtnUrunKategoriSil.Name = "BtnUrunKategoriSil";
+            this.BtnUrunKategoriSil.Size = new System.Drawing.Size(75, 23);
+            this.BtnUrunKategoriSil.TabIndex = 24;
+            this.BtnUrunKategoriSil.Text = "Sil";
+            this.BtnUrunKategoriSil.UseVisualStyleBackColor = true;
+            this.BtnUrunKategoriSil.Click += new System.EventHandler(this.BtnUrunKategoriSil_Click);
+            // 
+            // CmbSilinecekUrunKategoriId
+            // 
+            this.CmbSilinecekUrunKategoriId.FormattingEnabled = true;
+            this.CmbSilinecekUrunKategoriId.Location = new System.Drawing.Point(350, 254);
+            this.CmbSilinecekUrunKategoriId.Name = "CmbSilinecekUrunKategoriId";
+            this.CmbSilinecekUrunKategoriId.Size = new System.Drawing.Size(156, 24);
+            this.CmbSilinecekUrunKategoriId.TabIndex = 23;
+            // 
+            // LstUrunKategorileri
+            // 
+            this.LstUrunKategorileri.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LstUrunKategorileri.FormattingEnabled = true;
+            this.LstUrunKategorileri.ItemHeight = 16;
+            this.LstUrunKategorileri.Location = new System.Drawing.Point(599, 3);
+            this.LstUrunKategorileri.Name = "LstUrunKategorileri";
+            this.LstUrunKategorileri.Size = new System.Drawing.Size(373, 637);
+            this.LstUrunKategorileri.TabIndex = 22;
+            // 
+            // BtnUrunKategoriEkle
+            // 
+            this.BtnUrunKategoriEkle.Location = new System.Drawing.Point(431, 174);
+            this.BtnUrunKategoriEkle.Name = "BtnUrunKategoriEkle";
+            this.BtnUrunKategoriEkle.Size = new System.Drawing.Size(75, 23);
+            this.BtnUrunKategoriEkle.TabIndex = 21;
+            this.BtnUrunKategoriEkle.Text = "Ekle";
+            this.BtnUrunKategoriEkle.UseVisualStyleBackColor = true;
+            this.BtnUrunKategoriEkle.Click += new System.EventHandler(this.BtnUrunKategoriEkle_Click);
+            // 
+            // TpgUrunEkle
+            // 
+            this.TpgUrunEkle.BackColor = System.Drawing.Color.Gray;
+            this.TpgUrunEkle.Controls.Add(this.CmbUrunTuru);
+            this.TpgUrunEkle.Controls.Add(this.label7);
+            this.TpgUrunEkle.Controls.Add(this.CmbSecilecekUrunKategorisi);
+            this.TpgUrunEkle.Controls.Add(this.label2);
+            this.TpgUrunEkle.Controls.Add(this.TxtBarkod);
+            this.TpgUrunEkle.Controls.Add(this.label4);
+            this.TpgUrunEkle.Controls.Add(this.label1);
+            this.TpgUrunEkle.Controls.Add(this.TxtUrunAdi);
+            this.TpgUrunEkle.Controls.Add(this.label3);
+            this.TpgUrunEkle.Controls.Add(this.BtnUrunSil);
+            this.TpgUrunEkle.Controls.Add(this.CmbUrunId);
+            this.TpgUrunEkle.Controls.Add(this.LstUrunListesi);
+            this.TpgUrunEkle.Controls.Add(this.BtnUrunEkle);
+            this.TpgUrunEkle.Location = new System.Drawing.Point(4, 25);
+            this.TpgUrunEkle.Name = "TpgUrunEkle";
+            this.TpgUrunEkle.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgUrunEkle.Size = new System.Drawing.Size(975, 643);
+            this.TpgUrunEkle.TabIndex = 3;
+            this.TpgUrunEkle.Text = "UrunEkle";
+            // 
+            // TxtBarkod
+            // 
+            this.TxtBarkod.Location = new System.Drawing.Point(265, 142);
+            this.TxtBarkod.Name = "TxtBarkod";
+            this.TxtBarkod.Size = new System.Drawing.Size(156, 22);
+            this.TxtBarkod.TabIndex = 41;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(90, 145);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Barkod";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(90, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Ürün Adı";
+            // 
+            // TxtUrunAdi
+            // 
+            this.TxtUrunAdi.Location = new System.Drawing.Point(265, 107);
+            this.TxtUrunAdi.Name = "TxtUrunAdi";
+            this.TxtUrunAdi.Size = new System.Drawing.Size(156, 22);
+            this.TxtUrunAdi.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(90, 297);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(93, 16);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Silinecek Ürün";
+            // 
+            // BtnUrunSil
+            // 
+            this.BtnUrunSil.Location = new System.Drawing.Point(346, 333);
+            this.BtnUrunSil.Name = "BtnUrunSil";
+            this.BtnUrunSil.Size = new System.Drawing.Size(75, 23);
+            this.BtnUrunSil.TabIndex = 34;
+            this.BtnUrunSil.Text = "Sil";
+            this.BtnUrunSil.UseVisualStyleBackColor = true;
+            this.BtnUrunSil.Click += new System.EventHandler(this.BtnUrunSil_Click);
+            // 
+            // CmbUrunId
+            // 
+            this.CmbUrunId.FormattingEnabled = true;
+            this.CmbUrunId.Location = new System.Drawing.Point(265, 294);
+            this.CmbUrunId.Name = "CmbUrunId";
+            this.CmbUrunId.Size = new System.Drawing.Size(156, 24);
+            this.CmbUrunId.TabIndex = 33;
+            // 
+            // LstUrunListesi
+            // 
+            this.LstUrunListesi.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LstUrunListesi.FormattingEnabled = true;
+            this.LstUrunListesi.ItemHeight = 16;
+            this.LstUrunListesi.Location = new System.Drawing.Point(594, 3);
+            this.LstUrunListesi.Name = "LstUrunListesi";
+            this.LstUrunListesi.Size = new System.Drawing.Size(378, 637);
+            this.LstUrunListesi.TabIndex = 32;
+            // 
+            // BtnUrunEkle
+            // 
+            this.BtnUrunEkle.Location = new System.Drawing.Point(346, 248);
+            this.BtnUrunEkle.Name = "BtnUrunEkle";
+            this.BtnUrunEkle.Size = new System.Drawing.Size(75, 23);
+            this.BtnUrunEkle.TabIndex = 31;
+            this.BtnUrunEkle.Text = "Ekle";
+            this.BtnUrunEkle.UseVisualStyleBackColor = true;
+            this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
+            // 
+            // TpgUyeEkle
+            // 
+            this.TpgUyeEkle.Location = new System.Drawing.Point(4, 25);
+            this.TpgUyeEkle.Name = "TpgUyeEkle";
+            this.TpgUyeEkle.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgUyeEkle.Size = new System.Drawing.Size(975, 643);
+            this.TpgUyeEkle.TabIndex = 4;
+            this.TpgUyeEkle.Text = "UyeEkle";
+            this.TpgUyeEkle.UseVisualStyleBackColor = true;
+            // 
+            // BtnEkraniYenile
+            // 
+            this.BtnEkraniYenile.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnEkraniYenile.Location = new System.Drawing.Point(0, 370);
+            this.BtnEkraniYenile.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnEkraniYenile.Name = "BtnEkraniYenile";
+            this.BtnEkraniYenile.Size = new System.Drawing.Size(267, 74);
+            this.BtnEkraniYenile.TabIndex = 5;
+            this.BtnEkraniYenile.Text = "Ekranı Yenile";
+            this.BtnEkraniYenile.UseVisualStyleBackColor = true;
+            this.BtnEkraniYenile.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // BtnUrunEkleBuyuk
+            // 
+            this.BtnUrunEkleBuyuk.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUrunEkleBuyuk.Location = new System.Drawing.Point(0, 222);
+            this.BtnUrunEkleBuyuk.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnUrunEkleBuyuk.Name = "BtnUrunEkleBuyuk";
+            this.BtnUrunEkleBuyuk.Size = new System.Drawing.Size(267, 74);
+            this.BtnUrunEkleBuyuk.TabIndex = 3;
+            this.BtnUrunEkleBuyuk.Text = "Ürün Ekle";
+            this.BtnUrunEkleBuyuk.UseVisualStyleBackColor = true;
+            this.BtnUrunEkleBuyuk.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(90, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Ürün kategorisi";
+            // 
+            // CmbSecilecekUrunKategorisi
+            // 
+            this.CmbSecilecekUrunKategorisi.FormattingEnabled = true;
+            this.CmbSecilecekUrunKategorisi.Location = new System.Drawing.Point(265, 181);
+            this.CmbSecilecekUrunKategorisi.Name = "CmbSecilecekUrunKategorisi";
+            this.CmbSecilecekUrunKategorisi.Size = new System.Drawing.Size(156, 24);
+            this.CmbSecilecekUrunKategorisi.TabIndex = 43;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(93, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Ürün Türü";
+            // 
+            // CmbUrunTuru
+            // 
+            this.CmbUrunTuru.FormattingEnabled = true;
+            this.CmbUrunTuru.Location = new System.Drawing.Point(265, 214);
+            this.CmbUrunTuru.Name = "CmbUrunTuru";
+            this.CmbUrunTuru.Size = new System.Drawing.Size(156, 24);
+            this.CmbUrunTuru.TabIndex = 45;
             // 
             // FrmAdminPaneli
             // 
@@ -721,7 +757,6 @@
             this.ClientSize = new System.Drawing.Size(1264, 698);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.PnlAdisyon);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.PnlSolMenu);
             this.Controls.Add(this.statusStrip1);
@@ -729,10 +764,6 @@
             this.Text = "AdminPaneli";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmAdminPaneli_Load);
-            this.PnlAdisyonDetay.ResumeLayout(false);
-            this.PnlAdisyonDetay.PerformLayout();
-            this.PnlAdisyon.ResumeLayout(false);
-            this.PnlAdisyon.PerformLayout();
             this.PnlSolMenu.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -741,6 +772,10 @@
             this.TpgMasaKategoriEkle.PerformLayout();
             this.TpgMasaEkle.ResumeLayout(false);
             this.TpgMasaEkle.PerformLayout();
+            this.TpgUrunKategoriEkle.ResumeLayout(false);
+            this.TpgUrunKategoriEkle.PerformLayout();
+            this.TpgUrunEkle.ResumeLayout(false);
+            this.TpgUrunEkle.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,19 +784,8 @@
         #endregion
 
         private System.Windows.Forms.Splitter splitter2;
-        private System.Windows.Forms.TextBox TxtUrunArama;
-        private System.Windows.Forms.Label LblAdisyonNo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label LblAdisyonTutar;
-        private System.Windows.Forms.Label LblMasa;
-        private System.Windows.Forms.Panel PnlAdisyonUrunler;
-        private System.Windows.Forms.Panel PnlAdisyonDetay;
-        private System.Windows.Forms.Panel PnlAdisyon;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button BtnUyeEkle;
+        private System.Windows.Forms.Button BtnUrunKategoriEkle2;
         private System.Windows.Forms.Button BtnMasaEkle;
         private System.Windows.Forms.Panel PnlSolMenu;
         private System.Windows.Forms.Button BtnMasaKategori;
@@ -786,9 +810,7 @@
         private System.Windows.Forms.TabPage TpgUrunKategoriEkle;
         private System.Windows.Forms.TabPage TpgUrunEkle;
         private System.Windows.Forms.TabPage TpgUyeEkle;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnUyeEkleBuyuk;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtMasaKategoriAdi;
         private System.Windows.Forms.Button BtnMasaKategoriEkle2;
@@ -796,10 +818,6 @@
         private System.Windows.Forms.ComboBox CmbMasaKategorileri;
         private System.Windows.Forms.Button BtnMasaKategoriSil;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TxtMasaKategoriId;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtMasaId;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtnSil;
         private System.Windows.Forms.ComboBox CmbMasaAdi;
@@ -809,5 +827,27 @@
         private System.Windows.Forms.TextBox TxtMasaAdi;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TxtMasaKategoriID2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button BtnUrunKategoriSil;
+        private System.Windows.Forms.ComboBox CmbSilinecekUrunKategoriId;
+        private System.Windows.Forms.ListBox LstUrunKategorileri;
+        private System.Windows.Forms.Button BtnUrunKategoriEkle;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox TxtUrunKategoriAdi;
+        private System.Windows.Forms.TextBox TxtBarkod;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TxtUrunAdi;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnUrunSil;
+        private System.Windows.Forms.ComboBox CmbUrunId;
+        private System.Windows.Forms.ListBox LstUrunListesi;
+        private System.Windows.Forms.Button BtnUrunEkle;
+        private System.Windows.Forms.Button BtnEkraniYenile;
+        private System.Windows.Forms.Button BtnUrunEkleBuyuk;
+        private System.Windows.Forms.ComboBox CmbSecilecekUrunKategorisi;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox CmbUrunTuru;
+        private System.Windows.Forms.Label label7;
     }
 }
